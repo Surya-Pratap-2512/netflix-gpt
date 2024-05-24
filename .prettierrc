@@ -1,0 +1,7 @@
+{
+  "semi": true, // Don't use semicolons at the end of statements
+  "singleQuote": true, // Use single quotes instead of double quotes for strings
+  "trailingComma": "all", // Add trailing commas wherever possible
+  "tabWidth": 2, // Use 2 spaces for indentation
+  "printWidth": 80 // Wrap lines at 80 characters
+}
