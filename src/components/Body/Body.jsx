@@ -7,7 +7,7 @@ import Constants from "../../utils/Constants";
 const Body = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Image src={Constants.imgURL.bg} alt={"bgAltText"} className="absolute" />
       <Login />
     </div>

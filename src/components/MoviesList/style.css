@@ -1,0 +1,16 @@
+/* custom-scrollbar.css */
+
+/* Track */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4a5568; /* Change this color to fit your design */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3748; /* Change this color to fit your design */
+}

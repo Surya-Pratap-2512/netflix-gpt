@@ -33,7 +33,7 @@ const Login = () => {
       signInUser({ email, password }, setErrorMessage);
     } else {
       signUpUser(
-        { email, password, displayName, photoURL: Constants.photo_url },
+        { email, password, displayName, photoURL: Constants.imgURL.photo_url },
         setErrorMessage,
         { dispatch }
       );

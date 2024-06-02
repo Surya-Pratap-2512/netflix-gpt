@@ -18,27 +18,26 @@ const Header = () => {
   };
 
   useEffect(() => {
-    console.log("effect");
     onAuthStateChange({ dispatch, navigate });
   }, []);
 
   return (
     <div
-      className={`absolute z-10  ${
+      className={`absolute z-10 opacity-50  ${
         user &&
-        "w-full bg-gradient-to-r from-zinc-700 to-zinc-800 flex justify-between justify-item-center"
+        "w-full bg-gradient-to-r from-black flex justify-between justify-item-center"
       }`}
     >
       <Image
         src={Constants.imgURL.logo}
-        alt={intl.formatMessage({ id: "logoAltText" })}
+        alt={"logoAltText"}
         className="w-44 p-2 mx-4 my-2"
       />
       {user && (
         <div className="flex items-center mx-4">
           <Image
             src={user.photoURL}
-            alt={intl.formatMessage({ id: "userAvatar" })}
+            alt="userAvatar"
             className="w-7 rounded-full mx-2"
           />
           <button onClick={handleSignOut} className="text-white">

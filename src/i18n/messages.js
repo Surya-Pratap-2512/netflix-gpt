@@ -19,6 +19,9 @@ const messages = {
     existingUserSingInText: "Already Member of Netflix?",
     newUserSingUpText: "New to Netflix?",
     userAvatar: "User Avatar",
+    playBtn: "Play",
+    moreInfoBtn: "More Info",
+    movie: "Movie",
   },
   [LOCALES.FRENCH]: {
     logoAltText: "Logo Netflix",
@@ -36,6 +39,9 @@ const messages = {
     signUp: "S’enregistrer",
     existingUserSingInText: "Vous êtes déjà membre de Netflix?",
     newUserSingUpText: "Nouveau sur Netflix?",
+    playBtn: "Jouer",
+    moreInfoBtn: "Plus d’infos",
+    movie: "",
   },
   [LOCALES.GERMAN]: {},
 };

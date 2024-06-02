@@ -10,6 +10,40 @@ const Constants = {
     body: "/",
     browse: "/browse",
   },
+  options: {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZTA3NDMzYWFkZTU3ZWU0N2U2YWFiYjY1ZThmYWNiZCIsInN1YiI6IjY2NWFjM2E5Nzg1NGEwZjkxNzEwMzA0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ndW1LPEEDZ7hxvioMQ7IKorZhQ3etaTBcZp02ihHSaQ",
+    },
+  },
+  apiURL: {
+    nowPlayingMovies:
+      "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+    movieVideos: "https://api.themoviedb.org/3/movie/{0}/videos",
+    youtubeVideo:
+      "https://www.youtube.com/embed/{0}?&autoplay=1&enablejsapi=1&controls=0&mute=1&loop=1&playlist={0}",
+    posterImg: "https://image.tmdb.org/t/p/w342",
+    popularMovies:
+      "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
+    topRatedMovies:
+      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+    upcomingMovies:
+      "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",
+  },
+  videoTypes: {
+    trailer: "Trailer",
+    teaser: "Teaser",
+    featurette: "Featurette",
+    clip: "Clip",
+  },
+  moviesType: {
+    nowPlaying: "Trending",
+    upcoming: "Upcoming",
+    popular: "Popular",
+    topRated: "Top Rated",
+  },
 };
 
 export default Constants;
