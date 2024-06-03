@@ -5,7 +5,6 @@ import messages from "./i18n/messages";
 import LOCALES from "./i18n/locale";
 import appRouter from "./routes/appRouter";
 import appStore from "./store/appStore";
-import Header from "./components/Header/Header";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
     >
       <Provider store={appStore}>
         <RouterProvider router={appRouter}>
-          <Header />
           <Outlet />
         </RouterProvider>
       </Provider>

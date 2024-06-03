@@ -6,15 +6,20 @@ import { useIntl } from "react-intl";
 import Constants from "../../utils/Constants";
 import Image from "../Common/Image";
 import { userSignOut } from "../../apis/firebase";
+import { toggleGPTSearch } from "../../store/gptSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const intl = useIntl();
   const user = useSelector((store) => store.user);
-
+  const gptSearch = useSelector((store) => store.gpt.gptSearch);
   const handleSignOut = () => {
     userSignOut();
+  };
+
+  const handleGPTSearch = () => {
+    dispatch(toggleGPTSearch());
   };
 
   useEffect(() => {
@@ -23,7 +28,7 @@ const Header = () => {
 
   return (
     <div
-      className={`absolute z-10 opacity-50  ${
+      className={`absolute z-40 opacity-80  ${
         user &&
         "w-full bg-gradient-to-r from-black flex justify-between justify-item-center"
       }`}
@@ -35,6 +40,12 @@ const Header = () => {
       />
       {user && (
         <div className="flex items-center mx-4">
+          <button
+            className="text-white bg-violet-700 px-3 py-2 rounded-md mr-2"
+            onClick={handleGPTSearch}
+          >
+            {gptSearch ? "Home" : "GPT Search"}
+          </button>
           <Image
             src={user.photoURL}
             alt="userAvatar"

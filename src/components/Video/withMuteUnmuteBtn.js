@@ -13,7 +13,6 @@ const withMuteUnmuteBtn = (WrappedComponent) => (props) => {
           JSON.stringify({ event: "command", func: "unmute", args: "" }),
           "*"
         );
-        console.log(iframeRef.current.contentWindow);
       } else {
         iframeRef.current.contentWindow.postMessage(
           JSON.stringify({ event: "command", func: "mute", args: "" }),

@@ -14,8 +14,7 @@ const Constants = {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZTA3NDMzYWFkZTU3ZWU0N2U2YWFiYjY1ZThmYWNiZCIsInN1YiI6IjY2NWFjM2E5Nzg1NGEwZjkxNzEwMzA0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ndW1LPEEDZ7hxvioMQ7IKorZhQ3etaTBcZp02ihHSaQ",
+      Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
     },
   },
   apiURL: {
@@ -31,6 +30,7 @@ const Constants = {
       "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
     upcomingMovies:
       "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",
+    searchMovie: "https://api.themoviedb.org/3/search/movie?query={0}&page=1",
   },
   videoTypes: {
     trailer: "Trailer",
@@ -43,6 +43,16 @@ const Constants = {
     upcoming: "Upcoming",
     popular: "Popular",
     topRated: "Top Rated",
+  },
+  openai: {
+    key: "",
+  },
+  huggingface: {
+    key: process.env.REACT_APP_HUGGING_FACE_KEY,
+  },
+  query: {
+    recommendMovies:
+      "Act as a movie recommendation system. Recommend 5 movies for the query : {0}. Provide only comma separated movies name as per the example. Don't add extra text in response apart from movie name",
   },
 };
 
