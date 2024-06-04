@@ -7,7 +7,11 @@ import GPTSuggest from "./GPTSuggest";
 const GPTSearch = () => {
   return (
     <div className="">
-      <Image src={Constants.imgURL.bg} alt={"bgAltText"} className="fixed" />
+      <Image
+        src={Constants.imgURL.bg}
+        alt={"bgAltText"}
+        className="h-full object-cover fixed md:w-full"
+      />
       <GPTSearchBar />
       <GPTSuggest />
     </div>

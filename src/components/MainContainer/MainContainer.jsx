@@ -7,9 +7,14 @@ import VideoTitle from "../Video/VideoTitle";
 import VideoBackground from "../Video/VideoBackground";
 import withMuteUnmuteBtn from "../Video/withMuteUnmuteBtn";
 import { getRandIntg } from "../../utils/functions";
+import { getNowPlayingMovies } from "../../selector/moviesSelector";
 
 const MainContainer = () => {
-  useMovies(Constants.apiURL.nowPlayingMovies, addNowPlayingMovies);
+  useMovies(
+    Constants.apiURL.nowPlayingMovies,
+    addNowPlayingMovies,
+    getNowPlayingMovies
+  );
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
   if (!movies) return;
   const index = getRandIntg(0, movies.length);

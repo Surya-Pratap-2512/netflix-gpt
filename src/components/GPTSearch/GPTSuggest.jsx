@@ -7,7 +7,7 @@ const GPTSuggest = () => {
     (store) => store.gpt
   );
   return (
-    <div className="bg-black absolute p-4 my-4 opacity-90">
+    <div className="bg-black absolute p-4 my-4 md:ml-6 opacity-90">
       {recommendedMoviesNames &&
         recommendedMoviesNames.map((movie, index) => (
           <MoviesList

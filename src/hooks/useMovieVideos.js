@@ -3,9 +3,11 @@ import Constants from "../utils/Constants";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addMovieVideo } from "../store/moviesSlice";
+import { useSelector } from "react-redux";
 
 const useMovieVideos = (movieId, videoType) => {
   const dispatch = useDispatch();
+  const { movieVideo } = useSelector((store) => store.movies);
   const fetchMovieVideo = async () => {
     const response = await fetch(
       formatString(Constants.apiURL.movieVideos, movieId),
@@ -19,7 +21,9 @@ const useMovieVideos = (movieId, videoType) => {
       addMovieVideo(filteredResult ? filteredResult[0] : json.results[0])
     );
   };
-  useEffect(() => fetchMovieVideo, []);
+  useEffect(() => {
+    !movieVideo && fetchMovieVideo();
+  }, []);
 };
 
 export default useMovieVideos;

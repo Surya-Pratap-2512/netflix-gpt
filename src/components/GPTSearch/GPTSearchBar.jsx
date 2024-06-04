@@ -39,8 +39,8 @@ const GPTSearchBar = () => {
   };
 
   return (
-    <div className="pt-[15%] flex justify-center relative z-20">
-      <div className="w-1/2 bg-black grid grid-cols-12">
+    <div className="pt-[42%] md:pt-[15%] flex justify-center relative z-20">
+      <div className="w-full mx-2 md:w-1/2 md:mx-0 bg-black grid grid-cols-12">
         <input
           ref={searchRef}
           type="search"

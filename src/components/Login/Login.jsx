@@ -41,7 +41,7 @@ const Login = () => {
   };
 
   return (
-    <div className="w-3/12 bg-black opacity-90 absolute left-0 right-0 mx-auto my-32 p-10">
+    <div className="w-full md:w-3/12 bg-black opacity-90 absolute md:left-0 md:right-0 md:mx-auto my-32 p-10">
       <h1 className="text-white my-4 text-3xl">
         <FormattedMessage id={formHeadingId} />
       </h1>

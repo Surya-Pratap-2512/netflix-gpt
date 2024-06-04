@@ -8,7 +8,11 @@ const Body = () => {
   return (
     <div>
       <Header />
-      <Image src={Constants.imgURL.bg} alt={"bgAltText"} className="absolute" />
+      <Image
+        src={Constants.imgURL.bg}
+        alt={"bgAltText"}
+        className="h-full object-cover md:w-full absolute"
+      />
       <Login />
     </div>
   );
